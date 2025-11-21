@@ -18,24 +18,21 @@ Key questions addressed:
 - Does poor work–life balance cause turnover?  
 - Which departments have the highest attrition?  
 
-
 ---
 
 ##  Target Audience  
-From page 7 of the presentation:  
 - **HR Managers** → detect at-risk employees early  
 - **Data Analysts** → support retention strategies  
-:contentReference[oaicite:3]{index=3}
 
 ---
 
 ##  Project Files  
 | File | Description |
 |------|-------------|
-| `Capstone 2 IBM HR Employee Attrition.ipynb` | Complete analysis, preprocessing, modeling |
-| `SIC Capstone 2 Presentation.pdf` | Presentation slides with visuals and insights |
+| `Capstone 2 IBM HR Employee Attrition.ipynb` | Complete data analysis, preprocessing & modeling |
+| `SIC Capstone 2 Presentation.pdf` | Final project presentation |
 | `app.py` | Streamlit deployment script |
-| `data/` |  dataset used |
+| `data/` | Dataset used |
 
 ---
 
@@ -56,7 +53,7 @@ From page 7 of the presentation:
 ---
 
 ##  Data Preprocessing  
-As shown on **page 11**, preprocessing included: :contentReference[oaicite:5]{index=5}
+Data cleaning & preprocessing included:
 
 - Creating categorical bins  
 - Dropping columns with a single value  
@@ -68,29 +65,29 @@ As shown on **page 11**, preprocessing included: :contentReference[oaicite:5]{in
 ##  Key Visual Insights  
 
 ### **1️⃣ Income vs Attrition**  
-Employees with **lower monthly incomes leave more often**.  
+Employees with **lower monthly incomes leave more often**.
 
 ### **2️⃣ Age + Years at Company**  
-Young and new employees have the **highest attrition rates**.  
+Young and new employees have the **highest attrition rates**.
 
 ### **3️⃣ Total Working Years**  
-Attrition highest in the **first 0–2 years**, declines after.  
+Attrition is highest during the **first 0–2 years**, then declines.
 
 ### **4️⃣ Department Breakdown**  
 - Sales → highest attrition (20.6%)  
-- Research & Development → lowest (13.8%)  
+- R&D → lowest (13.8%)
 
 ### **5️⃣ Education Level**  
-Employees with **lower education levels leave the most**.  
+Employees with **lower education levels leave the most**.
 
 ### **6️⃣ Work-Life Balance**  
 Poor work–life balance → **31.2% attrition**  
-Good balance → much lower  
+Good balance → significantly lower.
 
 ---
 
 ##  Dashboard  
-A full interactive dashboard visualizing attrition across:
+An interactive dashboard visualizes attrition by:
 
 - Gender  
 - Salary  
@@ -99,21 +96,21 @@ A full interactive dashboard visualizing attrition across:
 - Education  
 - Department  
 
-
 ---
 
 ##  Modeling & Performance  
-Models applied:  
+Models applied:
+
 - Logistic Regression  
 - Random Forest  
 - SVM  
 - XGBoost  
 
-With:  
+Model optimization:
+
 - **GridSearchCV**  
 - **RandomizedSearchCV**  
-- **SMOTEENN** for class imbalance  
-
+- **SMOTEENN** for handling class imbalance  
 
 ### **Top Features (Random Forest)**  
 - MonthlyIncome  
@@ -124,11 +121,10 @@ With:
 - DailyRate  
 - YearsAtCompany  
 
-
 ---
 
-##  Deployment  
-An interactive **Streamlit app** was built to predict attrition using 8 key features:
+##  Deployment (Streamlit App)  
+The deployed app uses **8 key features**:
 
 - Job Level  
 - Percent Salary Hike  
@@ -139,11 +135,9 @@ An interactive **Streamlit app** was built to predict attrition using 8 key feat
 - Monthly Income  
 - Distance From Home  
 
-
 ---
 
 ##  Insights Summary  
-*(From page 26)*  
 - No training → **25% attrition**  
 - Very unhappy employees → **20% attrition**  
 - Frequent travel increases attrition  
@@ -159,8 +153,8 @@ An interactive **Streamlit app** was built to predict attrition using 8 key feat
 
 ---
 
-##  How to Run the Streamlit App
+##  Requirements  
+Install all dependencies:
 
-### Install dependencies:
 ```bash
 pip install -r requirements.txt
